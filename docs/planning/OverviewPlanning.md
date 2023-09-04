@@ -15,3 +15,13 @@
 
 - SQL
 -
+
+### Timings Plan:
+
+Mon: 8am
+Tue: 10pm
+Wed: 8am
+Thu: 10pm
+Fri: 8am
+Sat: 8am
+Sun: ---
