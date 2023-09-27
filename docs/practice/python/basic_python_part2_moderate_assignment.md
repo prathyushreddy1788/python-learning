@@ -5,7 +5,7 @@
 ### 1. Function Basics
 Write a Python function that takes two numbers as input and returns their sum. Then, call this function and print the result.
 
-def sum(a,b):
+def sum(a:int,b:int):
     result = a+b
     return(result)
 sum(1,2)
@@ -15,8 +15,8 @@ print(sum(1,2))
 Create a program that asks the user for input and handles a ValueError if the input cannot be converted to an integer. Provide an appropriate error message.
 
 try:
-    user_input = input("Please enter an integer: ")
-    user_input = int(user_input)
+    user_input: str = input("Please enter an integer: ")
+    user_input: int = int(user_input)
     print("You entered:", user_input)
 except ValueError:
     print("Error: Input is not a valid integer.")
@@ -25,17 +25,31 @@ except ValueError:
 ### 3. File Reading
 Write a Python program that reads a text file ("sample.txt") line by line and prints each line.
 
-with open("sample.txt", "r") as file:
-    for line in file:
-        print(line, end="")
+
+file_name = "samplex.txt"
+
+try:
+    
+    with open(file_name, 'r') as file:
+       
+        for line in file:
+            print(line.strip()) 
+
+except FileNotFoundError:
+    print(f"File '{file_name}' not found.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
 
         
 ### 4. List Comprehensions
 Given a list of numbers, use a list comprehension to create a new list containing only the even numbers.
 
-numbers = [1, 2, 3, 4, 5, 6]
-even_numbers = [x for x in numbers if x % 2 == 0]
-print(even numbers)
+original_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+even_numbers = [num for num in original_list if num % 2 == 0]
+
+print(even_numbers)
 
 
 ### 5. Debugging
@@ -50,10 +64,12 @@ y = 7
 print(calculate_sum(x, y))
 
 
+
+
 ### 6. Module Import
 Create a Python module with a function that calculates the factorial of a number. Import this module into your main program and use the function to find the factorial of a given number.
 
-def factorial(n):
+def factorial(n:int):
     result = 1
     for i in range(1, n + 1):
         result *= i
