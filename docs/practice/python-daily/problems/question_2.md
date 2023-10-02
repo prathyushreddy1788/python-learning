@@ -1,0 +1,1 @@
+Given a dictionary containing the names and ages of a group of people, write a Python function that returns the name of the oldest person in the group. The input dictionary is in the format: {"Alice": 30, "Bob": 25, "Charlie": 35, "David": 40}. The function should return the name of the person with the highest age.
