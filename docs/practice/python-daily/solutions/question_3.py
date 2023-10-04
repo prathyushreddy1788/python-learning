@@ -1,15 +1,18 @@
 def country_and_name(list_of_information):
-    list_of_namesUSA = []
-    list_of_namesCANADA = []
+
     output_dict = {}
+
     for information in list_of_information:
-        for key, value in information.items():
-            if key == "country" and value == "USA":
-                list_of_namesUSA.append(information["name"])
-            elif key == "country" and value == "Canada":
-                list_of_namesCANADA.append(information["name"])
-    output_dict["USA"] = list_of_namesUSA
-    output_dict["Canada"] = list_of_namesCANADA
+
+        if information["country"] in output_dict:
+
+            output_dict[information["country"]].append(information["name"])
+        else:
+            output_dict[information["country"]] = [information["name"]]
+
+
+
+
     return output_dict
 
 
