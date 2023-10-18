@@ -12,3 +12,34 @@
 
 # if
 #else: print "not a palindrome number"
+
+def check_palindrome(input_string):
+    input_string = input_string.lower()
+    new_string = ""
+    for char in input_string:
+        ascii_value = ord(char)
+        if ascii_value in range(97,123):
+            new_string += char
+        else:
+            continue
+
+    i = 0
+    n = len(new_string)
+    while i <= n-1 and new_string[i] == new_string[n-i-1]:
+        i+=1
+    if i == n:
+        print("it's a palindrome")
+    else:
+        print("print it's not a palindrome number")
+
+
+
+
+
+
+
+
+
+input_string = "A man, a plan, a canal, Panama!"
+check_palindrome(input_string)
+    
