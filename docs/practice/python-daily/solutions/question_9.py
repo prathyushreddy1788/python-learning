@@ -16,6 +16,8 @@
 def check_palindrome(input_string):
     input_string = input_string.lower()
     new_string = ""
+
+    # remove any special characters or spaces
     for char in input_string:
         ascii_value = ord(char)
         if ascii_value in range(97,123):
@@ -41,5 +43,8 @@ def check_palindrome(input_string):
 
 
 input_string = "A man, a plan, a canal, Panama!"
-check_palindrome(input_string)
+#check_palindrome(input_string)
+print(ord(input_string[0]))
+
+
     

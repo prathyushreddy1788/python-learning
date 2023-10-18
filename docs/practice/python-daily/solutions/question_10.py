@@ -6,8 +6,8 @@
 
 def longest_consecutive_subsequence(input_list):
     input_list.sort()
-    my_set = set(input_list)
-    unique_list = list(input_list)
+    my_set = set(input_list) # to get unique values
+    unique_list = list(my_set) # the unique set into list
     old_list = []
     new_list = []
     n = len(unique_list)
@@ -25,5 +25,5 @@ def longest_consecutive_subsequence(input_list):
 
 
 
-input_list =[4, 2, 8, 5, 3, 9, 1]
+input_list =[4, 4, 2, 8, 5, 3, 9, 1]
 print(longest_consecutive_subsequence(input_list))
