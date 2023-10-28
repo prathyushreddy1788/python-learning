@@ -2,7 +2,7 @@
 # The class should have methods to add items, remove items, calculate the total price,
 # and apply discounts. Each item can have attributes like name, price, and quantity.
 # Implement methods to display the cart contents and the final invoice after applying discounts.
-class Items:
+class Item:
     def __init__(self, name, price, quantity, discount):
         self.name = name
         self.price = price
@@ -14,15 +14,15 @@ class Items:
 class ShoppingCart:
 
     def __init__(self):
-        self.collection_items: list[Items] = []
+        self.collection_items: list[Item] = []
 
 
-    def add_items(self, items_obj : Items):
+    def add_items(self, items_obj : Item):
         self.collection_items.append(items_obj)
 
 
-    def remove_items(self, items_obj : Items):
-        self.collection_items.append(items_obj)
+    def remove_items(self, items_obj : Item): 
+        self.collection_items.remove(items_obj)
 
 
     def invoice(self):
@@ -34,14 +34,15 @@ class ShoppingCart:
         print(f"total bill is {bill}")
 
 
-item1 = Items("name", 30, 2, 50)
-item2 = Items("biscuit", 100, 20, 40)
-item3 = Items("apples", 50, 10, 50)
+item1 = Item("name", 30, 2, 50)
+item2 = Item("biscuit", 100, 20, 40)
+item3 = Item("apples", 50, 10, 50)
 
 cart = ShoppingCart()
 cart.add_items(item1)
 cart.add_items(item2)
 cart.add_items(item3)
+cart.remove_items(item3)
 cart.invoice()
 
 
