@@ -11,3 +11,15 @@ INSERT INTO Sales (OrderID, ProductID, Quantity, Date) VALUES
 (3, 101, 2, '2023-10-02'),
 (4, 103, 7, '2023-10-03'),
 (5, 102, 4, '2023-10-03');
+
+SELECT
+    ProductID,
+    SUM(Quantity) AS total_quantity
+FROM Sales
+GROUP BY ProductID;
+
+SELECT
+    ProductID,
+    SUM(Quantity) AS total_quantity
+FROM Sales WHERE date = "2023-10-02"
+GROUP BY ProductID;

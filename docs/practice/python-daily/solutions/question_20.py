@@ -10,4 +10,7 @@ def fibonacci_sequence(n: int):
 
 print(fibonacci_sequence(7))
 
+# 0,1,1,2,3,5,8,13........
+#
+
 
