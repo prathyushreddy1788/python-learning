@@ -6,5 +6,5 @@ GROUP BY course;
 
 
 SELECT StudentID from grades
-where Grade = "A" and (Course = "Math"  or Course = "History")
+where Grade = "A" and (Course in ["Math","History"])
 group by StudentID;

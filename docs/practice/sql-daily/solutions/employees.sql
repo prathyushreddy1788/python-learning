@@ -1,3 +1,5 @@
+
+#Group by the average salary for each department
 select department_name,avg(salary)
 from departments inner join employees
 on departments.department_id = employees.department_id
