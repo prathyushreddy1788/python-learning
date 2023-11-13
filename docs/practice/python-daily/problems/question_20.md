@@ -1,0 +1,2 @@
+Fibonacci Sequence
+Write a recursive Python function that takes a non-negative integer n as input and returns the nth number in the Fibonacci sequence. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1. Implement the function using recursion.

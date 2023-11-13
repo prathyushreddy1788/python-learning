@@ -1,0 +1,1 @@
+Write a Python function that takes a sentence as input and returns a new sentence where each word is reversed, but the order of the words remains the same. For example, if the input is "Hello World, Python Programming", the function should return "olleH ,dlroW nohtyP gnimmargorP".

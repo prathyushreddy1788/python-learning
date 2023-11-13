@@ -40,7 +40,7 @@ result = factorial_module.factorial(number)
 print(f"Factorial of {number} is {result}")
 
 
-# question7.py
+# question_7.py
 user_name = input("Enter your name: ")
 with open("names.txt", "w") as file:
     file.write(user_name)

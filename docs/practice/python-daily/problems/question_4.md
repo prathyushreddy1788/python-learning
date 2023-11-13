@@ -1,0 +1,1 @@
+Write a Python function that takes a list of strings as input. The function should return a new list containing only the strings with more than 3 characters and starting with the letter 'A'. For example, if the input list is ["Apple", "Banana", "Ant", "Orange", "Art"], the function should return ["Apple", "Ant", "Art"]. 
